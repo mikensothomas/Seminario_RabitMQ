@@ -16,12 +16,12 @@ connection = pika.BlockingConnection(connection_parameters)
 channel = connection.channel()
 
 channel.queue_declare(
-    queue="dados_fila",
+    queue="fila1",
     durable=True
 )
 
 channel.basic_consume(
-    queue="dados_fila",
+    queue="fila1",
     auto_ack=True,
     on_message_callback=minha_callback
 )

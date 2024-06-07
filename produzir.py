@@ -20,7 +20,7 @@ try:
             break
         
         channel.basic_publish(
-            exchange="dados_fila",
+            exchange="trocaFila1",
             routing_key="",
             body=mensagem,
             properties=pika.BasicProperties(
